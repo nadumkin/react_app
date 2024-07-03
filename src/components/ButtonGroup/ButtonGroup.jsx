@@ -2,14 +2,10 @@ import React from 'react';
 import {Button} from "../Button/Button";
 import './style.css'
 
-const ButtonGroup = () => {
+const ButtonGroup = ({inputHandler}) => {
 
     const signArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-    const operatorArray = ['=', '+', '-']
-
-    const signClickHandler = (sign) => {
-        console.log(sign);
-    }
+    const operatorArray = ['⇽', '=', '+', '-']
 
     return (
         <div className='buttonGroup'>
@@ -18,7 +14,7 @@ const ButtonGroup = () => {
                     return <Button
                         key={sign}
                         sign={sign}
-                        clickHandler={() => signClickHandler(sign)}
+                        clickHandler={() => inputHandler(sign)}
                     />
                 })}
             </div>
@@ -27,7 +23,7 @@ const ButtonGroup = () => {
                     return <Button
                         key={sign}
                         sign={sign}
-                        clickHandler={() => signClickHandler(sign)}
+                        clickHandler={() => inputHandler(sign)}
                         isOperator
                     />
                 })}
