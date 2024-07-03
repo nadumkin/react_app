@@ -1,0 +1,17 @@
+.displayContainer{
+    width: 270px;
+    background-color: black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 5px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.displayContainer > p{
+    margin: 0;
+    font-size: 32px;
+    color: white;
+}
