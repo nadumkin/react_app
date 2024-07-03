@@ -13,6 +13,8 @@ function App() {
   }, [state])
 
   const updateStateString = (sign) => {
+      console.log(state);
+
         if(state === '0' && signArray.includes(sign)) {
             return setState('' + String(sign));
         }
@@ -45,9 +47,7 @@ function App() {
 
       }
 
-      console.log(result);
-
-      setState(result);
+      setState(String(result));
   }
 
   return (
